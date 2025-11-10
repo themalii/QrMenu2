@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowboy's Burger - Menü</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    
+    <div class="container max-w-lg mx-auto p-4">
+
+        
+        <header class="text-center py-8">
+            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-5xl sm:text-6xl) -->
+            <div class="font-western text-5xl sm:text-6xl text-[#D2691E]" style="text-shadow: 2px 2px 4px rgba(107, 79, 79, 0.3);">
+                Cowboy's Burger
+            </div>
+            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-lg sm:text-xl) -->
+            <div class="text-lg sm:text-xl text-[#6B4F4F] font-semibold">
+                ★ VAHŞİ BATI LEZZETLERİ ★
+            </div>
+        </header>
+
+        
+        <nav id="category-nav" class="sticky top-0 z-10 py-3 shadow-md">
+            <div class="flex justify-center gap-2 flex-wrap">
+                <a href="#burgers" class="nav-button font-western py-2 px-4 rounded-md text-sm">Burgerler</a>
+                <a href="#sides" class="nav-button font-western py-2 px-4 rounded-md text-sm">Yan Ürünler</a>
+                <a href="#drinks" class="nav-button font-western py-2 px-4 rounded-md text-sm">İçecekler</a>
+            </div>
+        </nav>
+
+        
+        <main class="menu-card rounded-lg shadow-xl overflow-hidden mt-4">
+
+            
+            <section id="burgers" class="pt-4">
+                <h2 class="section-title">
+                    <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-3xl sm:text-4xl) -->
+                    <span class="section-title-text font-western text-3xl sm:text-4xl">Burgerler</span>
+                </h2>
+
+                <div class="px-6 py-4">
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/D2691E/FFF?text=Burger" 
+                             alt="[Burger Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">The Sheriff</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">180gr dana köftesi, özel kovboy sos, cheddar peyniri, çıtır soğan ve turşu.</p>
+                            <span class="item-price price-tag text-lg">450 TL</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/A0522D/FFF?text=Burger" 
+                             alt="[BBQ Burger Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">Rodeo Rancher</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">180gr dana köftesi, füme et, barbekü sos, karamelize soğan ve mantar.</p>
+                            <span class="item-price price-tag text-lg">495 TL</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/8B4513/FFF?text=Spicy" 
+                             alt="[Acılı Burger Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">Wild Fire</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">180gr dana köftesi, acı jalapeno biberleri, acı sos ve pepper jack peyniri.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="item-price price-tag text-lg">470 TL</span>
+                                <span class="item-badge">Acı!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="sides" class="pt-4">
+                <h2 class="section-title">
+                    <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-3xl sm:text-4xl) -->
+                    <span class="section-title-text font-western text-3xl sm:text-4xl">Yan Ürünler</span>
+                </h2>
+
+                <div class="px-6 py-4">
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/D2691E/FFF?text=Fries" 
+                             alt="[Patates Kızartması Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">Western Fries</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">Özel baharat karışımı ile harmanlanmış çıtır patates kızartması.</p>
+                            <span class="item-price price-tag text-lg">150 TL</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/A0522D/FFF?text=Onion" 
+                             alt="[Soğan Halkası Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">Onion Rings</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">Çıtır panelenmiş soğan halkaları, yanında ranch sos ile.</p>
+
+                            <span class="item-price price-tag text-lg">170 TL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="drinks" class="pt-4">
+                <h2 class="section-title">
+                    <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-3xl sm:text-4xl) -->
+                    <span class="section-title-text font-western text-3xl sm:text-4xl">İçecekler</span>
+                </h2>
+
+                <div class="px-6 py-4">
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/6B4F4F/FFF?text=Drink" 
+                             alt="[Limonata Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">Cactus Juice</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">Ev yapımı taze sıkılmış limonata.</p>
+                            <span class="item-price price-tag text-lg">110 TL</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="menu-item flex gap-4 p-4">
+                        <img src="https://placehold.co/100x100/4B3832/FFF?text=Soda" 
+                             alt="[Kola Resmi]"
+                             class="item-image w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                        <div class="flex-grow">
+                            <!-- DEĞİŞİKLİK: Font boyutu küçük ekranlar için ayarlandı (text-xl sm:text-2xl) -->
+                            <h3 class="item-name font-western text-xl sm:text-2xl text-[#8B4513]">Saloon Soda</h3>
+                            <p class="item-desc text-sm text-gray-700 mb-2">Kola, Fanta, Sprite, vb.</p>
+                            <span class="item-price price-tag text-lg">80 TL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        
+        <footer class="text-center py-6">
+            <p class="text-xs text-gray-600">&copy; 2025 Cowboy's Burger. Tüm hakları saklıdır.</p>
+        </footer>
+
+    </div>
+
+    
+    <div id="item-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        
+        <div id="modal-overlay" class="modal-overlay fixed inset-0"></div>
+
+        
+        <div class="modal-content relative z-10 w-full max-w-sm p-6 rounded-lg shadow-xl overflow-y-auto">
+            
+            <button id="modal-close" class="absolute top-2 right-2 text-3xl text-[#6B4F4F] hover:text-[#A0522D]">&times;</button>
+            
+            <img id="modal-image" src="https://placehold.co/400x300/D2691E/FFF?text=Burger" alt="[Ürün Resmi]" class="w-full h-48 object-cover rounded-lg mb-4 item-image">
+            <h3 id="modal-name" class="font-western text-3xl text-[#8B4513] mb-2">Ürün Adı</h3>
+            <p id="modal-desc" class="text-sm text-gray-700 mb-4">Ürün açıklaması buraya gelecek.</p>
+            <span id="modal-price" class="price-tag text-2xl">Fiyat</span>
+        </div>
+    </div>
+
+    <!-- Başa Dön Butonu -->
+    <button id="back-to-top-btn" title="Başa Dön">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

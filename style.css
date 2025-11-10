@@ -1,0 +1,155 @@
+
+        /* Tarayıcının yumuşak kaydırma yapmasını ve sticky nav için boşluk bırakmasını sağlıyoruz */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px; /* Sticky nav çubuğu için boşluk */
+        }
+
+        /* Özel stillerimizi buraya ekliyoruz */
+        body {
+            background-color: #F0E2D0; /* Yedek renk (RESİM YÜKLENMEZSE BU GÖRÜNÜR) */
+            
+            /* --- ARKA PLAN RESMİ --- */
+            /* Kendi 'ornek.jpg' dosyanız bu önizlemede GÖRÜNMEZ. */
+            /* Bu nedenle, önizlemede bir şey görebilmeniz için GEÇİCİ bir internet resmi koyuyoruz. */
+            background-image: url('ornek.png'); /* YENİ GEÇİCİ ÖNİZLEME RESMİ */
+            
+            background-size: cover; /* Resmi tüm arka planı kaplayacak şekilde ayarla */
+            background-attachment: fixed; /* Sayfa kaydırılsa bile resmin sabit kalmasını sağlar */
+            background-position: center center; /* Resmi ortala */
+            font-family: 'Lato', sans-serif;
+            color: #4B3832; /* (Koyu Kahve Metin Rengi) */
+        }
+
+        .font-western {
+            font-family: 'Rye', cursive;
+        }
+
+        .menu-card {
+            background-color: #FFFBF2; /* (Krem Rengi Kağıt) */
+            border: 4px solid #6B4F4F; /* (Koyu Ahşap Çerçeve) */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 
+                        inset 0 0 10px rgba(107, 79, 79, 0.2); /* İç gölge */
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .section-title::before,
+        .section-title::after {
+            content: '';
+            flex-grow: 1;
+            border-bottom: 2px solid #A0522D; /* (Sienna/Kiremit Rengi) */
+            margin: 0 0.5rem;
+        }
+        .section-title-text {
+            /* font-size: 2.25rem; -> Tailwind sınıflarıyla (text-3xl sm:text-4xl) HTML içinde halledildi */
+            color: #D2691E; /* (Çikolata/Kovboy Çizmesi Rengi) */
+        }
+
+        .menu-item {
+            border-bottom: 2px dashed #A0522D; /* (Sienna/Kiremit Rengi) */
+            transition: all 0.2s ease-in-out;
+            cursor: pointer; /* Tıklanabilir olduğunu belirtir */
+        }
+        .menu-item:hover {
+            transform: scale(1.02); /* Hafifçe büyütür */
+            background-color: rgba(253, 245, 230, 0.5); /* Hafif arka plan vurgusu */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .nav-button {
+            background-color: #8B4513; /* (Eyer Kahvesi) */
+            color: #FFFBF2;
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            background-color: #A0522D; /* (Sienna) */
+        }
+        /* Aktif navigasyon butonu stili */
+        .nav-button.active-nav {
+            background-color: #D2691E; /* (Çikolata Rengi) */
+            color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(210, 105, 30, 0.7);
+        }
+        
+        .price-tag {
+            color: #4B3832; /* (Koyu Kahve) */
+            font-weight: 700;
+        }
+        
+        .item-image {
+            border: 3px solid #6B4F4F; /* (Koyu Ahşap Çerçeve) */
+            filter: sepia(0.2); /* Hafif eskitme efekti */
+        }
+
+        /* Ürün Rozeti (Örn: Acı) */
+        .item-badge {
+            background-color: #D9534F; /* (Acı Kırmızısı) */
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+        /* Modal Stilleri */
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            background-color: #FFFBF2; /* (Krem Rengi Kağıt) */
+            border: 4px solid #6B4F4F; /* (Koyu Ahşap Çerçeve) */
+            max-height: 90vh;
+            transition: all 0.3s ease;
+        }
+        /* Sticky navigasyon çubuğunun arka planını da ahşap dokusuyla uyumlu hale getiriyoruz */
+        #category-nav {
+            background-color: #F0E2D0; /* Yedek renk */
+
+            /* --- NAVİGASYON ARKA PLAN RESMİ --- */
+            /* Burayı da ana arka planla aynı yapıyoruz. */
+            /* Değiştirmek isterseniz 'ornek.jpg' kısmını dosya adınızla değiştirin. */
+            /* ÖNİZLEME İÇİN GEÇİCİ İNTERNET RESMİ: */
+            background-image: url('https://i.imgur.com/K3pW4rC.jpg'); /* YENİ GEÇİCİ ÖNİZLEME RESMİ */
+
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* Başa Dön Butonu Stilleri */
+        #back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 40; /* Modal'ın (z-50) altında, diğer her şeyin üstünde */
+            background-color: #8B4513; /* (Eyer Kahvesi) */
+            color: #FFFBF2;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        #back-to-top-btn:hover {
+            background-color: #A0522D; /* (Sienna) */
+        }
+        #back-to-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
